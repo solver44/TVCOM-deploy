@@ -103,7 +103,6 @@
           i.nc && c.setAttribute("nonce", i.nc),
           (c.src = (function (e) {
             return (
-              i.p +
               "https://solver44.github.io/TVCOM-deploy/static/js/" +
               ({}[e] || e) +
               "." +
