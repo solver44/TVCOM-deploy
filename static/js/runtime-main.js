@@ -51,7 +51,7 @@
                     6: "ff956a67",
                   }[e] +
                   ".chunk.css",
-                a = i.p + n,
+                a = n,
                 u = document.getElementsByTagName("link"),
                 c = 0;
               c < u.length;
