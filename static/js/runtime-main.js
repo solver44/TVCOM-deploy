@@ -41,7 +41,7 @@
           (o[e] = new Promise(function (t, r) {
             for (
               var n =
-                  "static/css/" +
+                  "https://solver44.github.io/TVCOM-deploy/static/css/" +
                   ({}[e] || e) +
                   "." +
                   {
