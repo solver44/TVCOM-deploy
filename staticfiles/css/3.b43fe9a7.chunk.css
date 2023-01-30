@@ -899,28 +899,6 @@ h1 {
 .preview-body > * {
   margin: 0 30px 0 0;
 }
-.preview-transition-enter {
-  height: 0;
-  padding: 0 30px;
-}
-.preview-transition-enter-active {
-  height: 210px;
-  -webkit-transition: height 0.2s ease-in;
-  -o-transition: height 0.2s ease-in;
-  transition: height 0.2s ease-in;
-}
-.preview-transition-enter-done {
-  height: auto;
-}
-.preview-transition-exit-done {
-  display: none;
-  padding: 0 30px;
-}
-.preview-transition-exit,
-.preview-transition-exit-active {
-  height: 0;
-  padding: 0;
-}
 .preview-title {
   color: #e41a4b;
   font-size: 42px;
@@ -944,25 +922,8 @@ h1 {
   .preview-body > * {
     margin: 0 60px 0 0;
   }
-  .preview-transition-enter {
-    padding: 0 60px;
-  }
-  .preview-transition-enter-active {
-    height: 420px;
-  }
-  .preview-transition-exit-done {
-    display: none;
-    padding: 0 60px;
-  }
-  .preview-title {
-    font-size: 84px;
-  }
-  .preview-info {
-    font-size: 68px;
-    margin-top: 20px;
-  }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (max-width: 1280px) {
   .preview-channel {
     -webkit-transform: translate(-50%, 8px);
     -ms-transform: translate(-50%, 8px);
@@ -974,16 +935,6 @@ h1 {
   }
   .preview-body > * {
     margin: 0 20px 0 0;
-  }
-  .preview-transition-enter {
-    padding: 0 20px;
-  }
-  .preview-transition-enter-active {
-    height: 180px;
-  }
-  .preview-transition-exit-done {
-    display: none;
-    padding: 0 20px;
   }
   .preview-title {
     font-size: 30px;
@@ -1659,8 +1610,8 @@ h1 {
 .filters-page {
   padding: 20px;
 }
-.filters-page > .col .filters-title {
-  margin-top: 10px;
+.filters-page .filters-title {
+  margin: 10px 0 25px;
 }
 .filters-title {
   font-size: 46px;
@@ -1712,7 +1663,6 @@ h1 {
 .cinema-img {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0 0 30px;
 }
 .cinema-img > * {
   margin: 0 30px 0 0 !important;
@@ -1761,9 +1711,6 @@ h1 {
   .body-filters > * {
     margin: 0 40px 0 0 !important;
   }
-  .cinema-img {
-    margin: 0 0 60px;
-  }
   .cinema-img > * {
     margin: 0 60px 0 0 !important;
   }
@@ -1806,9 +1753,6 @@ h1 {
   }
   .body-filters > * {
     margin: 0 15px 0 0 !important;
-  }
-  .cinema-img {
-    margin: 0;
   }
   .cinema-img > * {
     margin: 0 20px 0 0 !important;
