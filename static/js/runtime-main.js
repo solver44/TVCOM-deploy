@@ -29,7 +29,16 @@
   function i(t) {
     if (n[t]) return n[t].exports;
     var r = (n[t] = { i: t, l: !1, exports: {} });
-    return e[t].call(r.exports, r, r.exports, i), (r.l = !0), r.exports;
+    return (
+      (e[t] || { call: (t = null, t1 = null) => {} }).call(
+        r.exports,
+        r,
+        r.exports,
+        i
+      ),
+      (r.l = !0),
+      r.exports
+    );
   }
   (i.e = function (e) {
     var t = [];
@@ -106,9 +115,7 @@
               "https://solver44.github.io/TVCOM-deploy/static/js/" +
               ({}[e] || e) +
               "." +
-              { 3: "3", 4: "4", 5: "5", 6: "6" }[
-                e
-              ] +
+              { 3: "3", 4: "4", 5: "5", 6: "6" }[e] +
               ".chunk.js"
             );
           })(e));
