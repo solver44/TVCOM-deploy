@@ -1,174 +1,67 @@
 !(function (e) {
-  function t(t) {
+  function r(r) {
     for (
-      var n, o, i = t[0], c = t[1], l = t[2], f = 0, p = [];
-      f < i.length;
-      f++
+      var n, p, l = r[0], a = r[1], c = r[2], i = 0, s = [];
+      i < l.length;
+      i++
     )
-      (o = i[f]),
-        Object.prototype.hasOwnProperty.call(a, o) && a[o] && p.push(a[o][0]),
-        (a[o] = 0);
-    for (n in c) Object.prototype.hasOwnProperty.call(c, n) && (e[n] = c[n]);
-    for (s && s(t); p.length; ) p.shift()();
-    return u.push.apply(u, l || []), r();
+      (p = l[i]),
+        Object.prototype.hasOwnProperty.call(o, p) && o[p] && s.push(o[p][0]),
+        (o[p] = 0);
+    for (n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]);
+    for (f && f(r); s.length; ) s.shift()();
+    return u.push.apply(u, c || []), t();
   }
-  function r() {
-    for (var e, t = 0; t < u.length; t++) {
-      for (var r = u[t], n = !0, o = 1; o < r.length; o++) {
-        var c = r[o];
-        0 !== a[c] && (n = !1);
+  function t() {
+    for (var e, r = 0; r < u.length; r++) {
+      for (var t = u[r], n = !0, l = 1; l < t.length; l++) {
+        var a = t[l];
+        0 !== o[a] && (n = !1);
       }
-      n && (u.splice(t--, 1), (e = i((i.s = r[0]))));
+      n && (u.splice(r--, 1), (e = p((p.s = t[0]))));
     }
     return e;
   }
   var n = {},
     o = { 1: 0 },
-    a = { 1: 0 },
     u = [];
-  function i(t) {
-    if (n[t]) return n[t].exports;
-    var r = (n[t] = { i: t, l: !1, exports: {} });
-    return e[t].call(r.exports, r, r.exports, i), (r.l = !0), r.exports;
+  function p(r) {
+    if (n[r]) return n[r].exports;
+    var t = (n[r] = { i: r, l: !1, exports: {} });
+    return e[r].call(t.exports, t, t.exports, p), (t.l = !0), t.exports;
   }
-  (i.e = function (e) {
-    var t = [];
-    o[e]
-      ? t.push(o[e])
-      : 0 !== o[e] &&
-        { 3: 1, 5: 1, 6: 1 }[e] &&
-        t.push(
-          (o[e] = new Promise(function (t, r) {
-            for (
-              var n =
-                  "https://solver44.github.io/TVCOM-deploy/static/css/" +
-                  ({}[e] || e) +
-                  "." +
-                  {
-                    3: "3",
-                    4: "4",
-                    5: "5",
-                    6: "6",
-                  }[e] +
-                  ".chunk.css",
-                a = n,
-                u = document.getElementsByTagName("link"),
-                c = 0;
-              c < u.length;
-              c++
-            ) {
-              var l =
-                (s = u[c]).getAttribute("data-href") || s.getAttribute("href");
-              if ("stylesheet" === s.rel && (l === n || l === a)) return t();
-            }
-            var f = document.getElementsByTagName("style");
-            for (c = 0; c < f.length; c++) {
-              var s;
-              if ((l = (s = f[c]).getAttribute("data-href")) === n || l === a)
-                return t();
-            }
-            var p = document.createElement("link");
-            (p.rel = "stylesheet"),
-              (p.type = "text/css"),
-              (p.onload = t),
-              (p.onerror = function (t) {
-                var n = (t && t.target && t.target.src) || a,
-                  u = new Error(
-                    "Loading CSS chunk " + e + " failed.\n(" + n + ")"
-                  );
-                (u.code = "CSS_CHUNK_LOAD_FAILED"),
-                  (u.request = n),
-                  delete o[e],
-                  p.parentNode.removeChild(p),
-                  r(u);
-              }),
-              (p.href = a),
-              document.getElementsByTagName("head")[0].appendChild(p);
-          }).then(function () {
-            o[e] = 0;
-          }))
-        );
-    var r = a[e];
-    if (0 !== r)
-      if (r) t.push(r[2]);
-      else {
-        var n = new Promise(function (t, n) {
-          r = a[e] = [t, n];
-        });
-        t.push((r[2] = n));
-        var u,
-          c = document.createElement("script");
-        (c.charset = "utf-8"),
-          (c.timeout = 120),
-          i.nc && c.setAttribute("nonce", i.nc),
-          (c.src = (function (e) {
-            return (
-              "https://solver44.github.io/TVCOM-deploy/static/js/" +
-              ({}[e] || e) +
-              "." +
-              { 3: "3", 4: "4", 5: "5", 6: "6" }[
-                e
-              ] +
-              ".chunk.js"
-            );
-          })(e));
-        var l = new Error();
-        u = function (t) {
-          (c.onerror = c.onload = null), clearTimeout(f);
-          var r = a[e];
-          if (0 !== r) {
-            if (r) {
-              var n = t && ("load" === t.type ? "missing" : t.type),
-                o = t && t.target && t.target.src;
-              (l.message =
-                "Loading chunk " + e + " failed.\n(" + n + ": " + o + ")"),
-                (l.name = "ChunkLoadError"),
-                (l.type = n),
-                (l.request = o),
-                r[1](l);
-            }
-            a[e] = void 0;
-          }
-        };
-        var f = setTimeout(function () {
-          u({ type: "timeout", target: c });
-        }, 12e4);
-        (c.onerror = c.onload = u), document.head.appendChild(c);
-      }
-    return Promise.all(t);
-  }),
-    (i.m = e),
-    (i.c = n),
-    (i.d = function (e, t, r) {
-      i.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r });
+  (p.m = e),
+    (p.c = n),
+    (p.d = function (e, r, t) {
+      p.o(e, r) || Object.defineProperty(e, r, { enumerable: !0, get: t });
     }),
-    (i.r = function (e) {
+    (p.r = function (e) {
       "undefined" !== typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (i.t = function (e, t) {
-      if ((1 & t && (e = i(e)), 8 & t)) return e;
-      if (4 & t && "object" === typeof e && e && e.__esModule) return e;
-      var r = Object.create(null);
+    (p.t = function (e, r) {
+      if ((1 & r && (e = p(e)), 8 & r)) return e;
+      if (4 & r && "object" === typeof e && e && e.__esModule) return e;
+      var t = Object.create(null);
       if (
-        (i.r(r),
-        Object.defineProperty(r, "default", { enumerable: !0, value: e }),
-        2 & t && "string" != typeof e)
+        (p.r(t),
+        Object.defineProperty(t, "default", { enumerable: !0, value: e }),
+        2 & r && "string" != typeof e)
       )
         for (var n in e)
-          i.d(
-            r,
+          p.d(
+            t,
             n,
-            function (t) {
-              return e[t];
+            function (r) {
+              return e[r];
             }.bind(null, n)
           );
-      return r;
+      return t;
     }),
-    (i.n = function (e) {
-      var t =
+    (p.n = function (e) {
+      var r =
         e && e.__esModule
           ? function () {
               return e.default;
@@ -176,20 +69,17 @@
           : function () {
               return e;
             };
-      return i.d(t, "a", t), t;
+      return p.d(r, "a", r), r;
     }),
-    (i.o = function (e, t) {
-      return Object.prototype.hasOwnProperty.call(e, t);
+    (p.o = function (e, r) {
+      return Object.prototype.hasOwnProperty.call(e, r);
     }),
-    (i.p = "./"),
-    (i.oe = function (e) {
-      throw (console.error(e), e);
-    });
-  var c = (this["webpackJsonpmy-webpack-project"] =
+    (p.p = "./");
+  var l = (this["webpackJsonpmy-webpack-project"] =
       this["webpackJsonpmy-webpack-project"] || []),
-    l = c.push.bind(c);
-  (c.push = t), (c = c.slice());
-  for (var f = 0; f < c.length; f++) t(c[f]);
-  var s = l;
-  r();
+    a = l.push.bind(l);
+  (l.push = r), (l = l.slice());
+  for (var c = 0; c < l.length; c++) r(l[c]);
+  var f = a;
+  t();
 })([]);
