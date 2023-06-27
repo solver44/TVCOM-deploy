@@ -11,12 +11,7 @@
           "image_url": "http://developer.samsung.com/onlinedocs/tv/Preview/1.jpg",
           "action_data": "{\"videoIdx\": 1}",
           "is_playable": true
-        }
-      ]
-    },
-    {
-      "title": "Рекомендуемые фильмы",
-      "tiles": [
+        },
         {
           "title": "Living",
           "image_ratio": "1by1",
