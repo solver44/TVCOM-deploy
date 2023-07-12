@@ -2,3 +2,8 @@
 в «runtime-main.js» вам нужно заменить (r.p+"static/media) на ("https://solver44.github.io/TVCOM-deploy/static/media) без скобок
 
 в "version.json" версии приложений WEBOS и TIZEN
+
+Файлы:
+runtime-main.js
+main.chunk.css
+static/media
